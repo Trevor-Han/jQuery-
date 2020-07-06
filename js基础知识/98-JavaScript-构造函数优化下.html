@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>98-JavaScript-构造函数优化下</title>
-    <script>
+   <!-- <script>
         // let fns = {
         //     mySay: function () {
         //         console.log("hello world");
@@ -28,7 +28,28 @@
         obj2.say();
         console.log(obj1.say === obj2.say); // true
         // console.log(Person.prototype);
-    </script>
+    </script>-->
+   <!-- <script>
+        function Text(res) {
+            let name = res.name,
+                age = res.age;
+
+            this.name = name;
+            this.age = age;
+            console.log(this.name, this.age);
+        }
+        Text.prototype = {
+            say: function () {
+                console.log("hello world");
+            }
+        }
+         let obj2 = new Text({
+             name:"lnj",
+             age:33
+         });
+        obj2.say();
+
+    </script>-->
 </head>
 <body>
 
