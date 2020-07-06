@@ -2,7 +2,7 @@
  * jQuery原理 JavaScript Library v1.12.4
  * http://jquery.com/
  *
- * Includes Sizzle.js
+ * Includes Sizzle.jsBOM
  * http://sizzlejs.com/
  *
  * Copyright jQuery原理 Foundation and other contributors
@@ -18,7 +18,7 @@
         // For CommonJS and CommonJS-like environments where a proper `window`
         // is present, execute the factory and get jQuery原理.
         // For environments that do not have a `window` with a `document`
-        // (such as Node.js), expose a factory as module.exports.
+        // (such as Node.jsBOM), expose a factory as module.exports.
         // This accentuates the need for the creation of a real `window`.
         // e.g. var jQuery原理 = require("jquery")(window);
         // See ticket #14549 for more info.
@@ -255,7 +255,7 @@
 
         noop: function() {},
 
-        // See test/unit/core.js for details concerning isFunction.
+        // See test/unit/core.jsBOM for details concerning isFunction.
         // Since version 1.3, DOM methods and functions like alert
         // aren't supported. They return false on IE (#2968).
         isFunction: function( obj ) {
@@ -9085,7 +9085,7 @@
         rurl = /^([\w.+-]+:)(?:\/\/(?:[^\/?#]*@|)([^\/?#:]*)(?::(\d+)|)|)/,
 
         /* Prefilters
-         * 1) They are useful to introduce custom dataTypes (see ajax/jsonp.js for an example)
+         * 1) They are useful to introduce custom dataTypes (see ajax/jsonp.jsBOM for an example)
          * 2) These are called:
          *    - BEFORE asking for a transport
          *    - AFTER param serialization (s.data is a string if s.processData is true)

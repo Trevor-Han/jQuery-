@@ -51,7 +51,7 @@
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             for(var i = n; i < len; i++) {
                 if(images[i].offsetTop < seeHeight + scrollTop) {
-                    if(images[i].getAttribute('src') === 'js/images/loading.gif') {
+                    if(images[i].getAttribute('src') === 'jsBOM/images/loading.gif') {
                         images[i].src = images[i].getAttribute('data-src');
 
                     }
