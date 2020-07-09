@@ -27,12 +27,12 @@
 <img src="images/loading.gif" data-src="images/balloon3.png">
 <img src="images/loading.gif" data-src="images/balloon3.png">
 <img src="images/loading.gif" data-src="images/balloon3.png">
-<!--<script>
+<script>
     function throttle(fn, delay, atleast) {//函数绑定在 scroll 事件上，当页面滚动时，避免函数被高频触发，
-        var timeout = null,//进行去抖处理
+        let timeout = null,//进行去抖处理
             startTime = new Date();
         return function() {
-            var curTime = new Date();
+            let curTime = new Date();
             clearTimeout(timeout);
             if(curTime - startTime >= atleast) {
                 fn();
@@ -66,7 +66,7 @@
     window.addEventListener('scroll', throttle(loadImages, 500, 1000), false);
     //函数节流（throttle）与函数去抖（debounce）处理,
     //500ms 的延迟，和 1000ms 的间隔，当超过 1000ms 未触发该函数，则立即执行该函数，不然则延迟 500ms 执行该函数
-</script>-->
+</script>
 <!--<script>
     // onload是等所有的资源文件加载完毕以后再绑定事件
     window.onload = function(){
@@ -125,8 +125,35 @@
     window.addEventListener("scroll",myjQuery.Throttle(lazyLoad,500,1000),false);
 
 </script>
-<script>
+<!--<script>
+function debounce() {
+    let timerId = null;
+    return function (fn,delay) {
+        let self = this;
+        let args = arguments;
+        timerId && clearTimeout(timerId);
+        timerId.setTimeout(function () {
+            fn.apply(self,args);
+        },delay || 1000)
 
-</script>
+    }
+}
+function throttle() {
+    let timerId = null;
+    let flag = true;
+    return function (fn,delay) {
+        if(!flag) return;
+        flag = false;
+        let self = this;
+        let args = arguments;
+        timerId && clearTimeout(timerId);
+        timerId.setTimeout(function () {
+            flag = true;
+            fn.apply(self,args);
+        },delay || 1000)
+
+    }
+}
+</script>-->
 </body>
 </html>
