@@ -3,24 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>86-JavaScript-预解析练习1</title>
-    <script>
+<!--    <script>
         // 1.下列程序的执行结果是什么?
         var num = 123;
         fun();
         function fun() {
+            num = 666;
             console.log(num);
-            var num = 666;
         }
+        // console.log(num);
         /*
         var num;
         function fun() {
            var num;
-           console.log(num); // undefined
            num = 666;
+           console.log(num); // undefined
         }
         num = 123;
         fun();
         */
+    </script>-->
+    <script>
+        //1、console的结果
+        var a = 10;
+        (function a(){
+             a = 20;
+            console.log(a);
+        })();
+        console.log(a);
+        //2、console的结果
+        var a = 10;
+        (function a(){
+            a = 20;
+            console.log(a);
+            var a = 30;
+            console.log(a);
+        })();
+        console.log(a);
+        // af();
+        // console.log(af);
+        //正常代码 
+     /*   var a = 10;
+        (function(){
+            a = 20;
+            console.log(a);
+        })();
+        console.log(a);*/
+        //预编译之后的代码 
+       /* var a;
+        (function(){
+          function a(){
+                a = 20;
+            console.log(a);
+        }
+        console.log(a);
+        })();
+        a = 10;
+        console.log(a);*/
     </script>
 </head>
 <body>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js试题</title>
+</head>
+<body>
+<input type="text" class="kuang" name=qq onBlur="/^\d{5,10}$/.test(this.value)?'':alert('请输入正确格式QQ号')"/>
+<script>
+    let a = true,b = 1;
+    console.log("a + b = " + a + b);
+
+/*Math.round()，Math.ceil()，Math.floor()的区别
+*Math.round():四舍五入”， 该函数返回的是一个四舍五入后的的整数
+* Math.ceil()向上取整”， 即小数部分直接舍去，并向正数部分进1
+* Math.floor()“向下取整” ，即小数部分直接舍去
+* ~~正数：向下取整；负数：向上取整
+* */
+let round = Math.round(Math.random()*10);
+let ceil  = Math.ceil(Math.random()*10);
+let floor = Math.floor(Math.random()*10);
+let fastfloor = ~~(Math.random()*10)
+
+console.log("round:"+round);
+console.log("ceil:"+ceil);
+console.log("floor:"+floor);
+console.log("fastfloor:"+fastfloor);
+
+    let date = new Date().getMonth() + 1;
+console.log(date);
+
+function fun(a) {
+    console.log(a);
+    function a() {}
+}
+fun(1);
+
+/*返回毫米时间戳*/
+    let dateA = Date.now();
+    console.log(dateA);
+
+    let dateB = new Date().getTime();
+    console.log(dateB);
+
+    let dateC = new Date().valueOf();
+    console.log(dateC);
+
+    let dateD = + new Date();
+    console.log(dateD);
+
+let cc = 1<<2 | 3 % 4;//==7 | 1
+    console.log(cc);
+
+    let timeout = setTimeout(function () {
+        console.log(11);
+    },5000);
+
+    //value数组中的当前项, index当前项的索引, array原始数组
+    let arrobj = {x:1,y:{a:2,b:{c:3,d:4}}};
+    console.log(arrobj.length);
+    for (key in arrobj){
+        console.log(arrobj[key]);
+    }
+</script>
+</body>
+</html>

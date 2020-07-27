@@ -54,9 +54,18 @@
 
         // 3.3作为一个立即执行的函数
         // 注意点: 如果想让匿名函数立即执行, 那么必须使用()将函数的定义包裹起来才可以
-        (function () {
-            console.log("hello it666");
+       /* var a = 10;
+        (function a() {
+             a = 20;
+            console.log(a);
         })();
+        console.log(a);*/
+       let a = {1:"a",2:"b",3:"c"};
+        console.log(a);
+        for(let key in a){
+            let b = key.split("").reverse();
+            console.log(b);
+        }
     </script>
 </head>
 <body>
