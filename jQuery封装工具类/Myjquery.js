@@ -29,9 +29,11 @@
         Throttle:function Throttle(fn,delay ,last) {
             let timeout = null,//进行去抖处理
                 startTime = new Date();
+            console.log("pre"+startTime);
             return function() {
                 let curTime = new Date();
                 clearTimeout(timeout);
+                console.log("now"+curTime);
                 if(curTime - startTime >= last) {
                     fn();
                     startTime = curTime;
