@@ -36,6 +36,7 @@
             margin-top: 10px;
             display: flex;
             justify-content: center;
+            color: skyblue;
         }
         .time>div{
             width: 40px;
@@ -69,9 +70,9 @@
     <i class="iconfont icon-lightningbshandian"></i>
     <p>本场距离结束还剩</p>
     <div class="time">
-        <div class="hour">00</div>
-        <div class="minute">00</div>
-        <div class="second">00</div>
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
     </div>
 </div>
 <script>
@@ -91,7 +92,6 @@
 
     function setTime(remDate) {
         let obj = getDifferTime(remDate);
-        // console.log(obj);
         oHour.innerText = obj.hour;
         oMinute.innerText = obj.minute;
         oSecond.innerText = obj.second;
